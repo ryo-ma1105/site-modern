@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ホーム | サンプル株式会社</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .bg-aurora {
+        position: fixed; inset: 0; z-index: -1;
+        background: radial-gradient(60% 60% at 10% 10%, rgba(56,189,248,.25), transparent 60%),
+                    radial-gradient(50% 50% at 90% 20%, rgba(167,139,250,.25), transparent 60%),
+                    radial-gradient(40% 40% at 30% 90%, rgba(34,197,94,.2), transparent 60%),
+                    linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #22c55e 100%);
+        filter: saturate(120%) blur(20px) brightness(1.05);
+        animation: hue 18s linear infinite;
+      }
+      @keyframes hue { 
+        0% { filter: hue-rotate(0deg) saturate(120%) blur(20px) brightness(1.05); }
+        100% { filter: hue-rotate(360deg) saturate(120%) blur(20px) brightness(1.05); }
+      }
+      .glass {
+        backdrop-filter: blur(12px) saturate(110%);
+        background: rgba(255,255,255,0.6);
+        border: 1px solid rgba(255,255,255,0.4);
+      }
+      .neon-underline {
+        position: relative;
+      }
+      .neon-underline::after {
+        content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px;
+        background: linear-gradient(90deg, #38bdf8, #a78bfa);
+        transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+      }
+      .neon-underline:hover::after { transform: scaleX(1); }
+      .grid-auto-fit { 
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;
+      }
+      .masonry { column-count: 3; column-gap: 1rem; }
+      @media (max-width: 1024px) { .masonry { column-count: 2; } }
+      @media (max-width: 640px) { .masonry { column-count: 1; } }
+      .card { break-inside: avoid; }
+    </style>
+  </head>
+  <body class="min-h-screen text-slate-800 antialiased selection:bg-sky-200 selection:text-slate-900">
+    <div class="bg-aurora"></div>
+    <header class="sticky top-0 z-50">
+      <div class="glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <a href="index.html" class="text-lg sm:text-xl font-bold tracking-wider text-slate-900">サンプル株式会社</a>
+            <nav class="hidden md:flex items-center gap-2">
+              <a href="index.html" class="px-3 py-2 rounded-md text-sm neon-underline">ホーム</a>
+              <a href="about.html" class="px-3 py-2 rounded-md text-sm neon-underline">私たちについて</a>
+              <a href="services.html" class="px-3 py-2 rounded-md text-sm neon-underline">事業</a>
+              <a href="works.html" class="px-3 py-2 rounded-md text-sm neon-underline">実績</a>
+              <a href="careers.html" class="px-3 py-2 rounded-md text-sm neon-underline">採用</a>
+              <a href="contact.html" class="ml-2 px-4 py-2 rounded-md text-sm font-semibold text-white shadow-sm bg-sky-500 hover:bg-sky-600">お問い合わせ</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden p-2 rounded-lg glass" aria-label="open menu">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden border-t border-white/50">
+          <div class="px-4 py-3 space-y-2 glass">
+            <a class="block text-sm neon-underline" href="index.html">ホーム</a>
+            <a class="block text-sm neon-underline" href="about.html">私たちについて</a>
+            <a class="block text-sm neon-underline" href="services.html">事業</a>
+            <a class="block text-sm neon-underline" href="works.html">実績</a>
+            <a class="block text-sm neon-underline" href="careers.html">採用</a>
+            <a class="block text-sm font-semibold inline-block rounded-md px-3 py-2 bg-sky-500 text-white" href="contact.html">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-16">
+        <div class="glass rounded-3xl p-8 sm:p-12 text-center">
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-violet-500">
+            全ての人に、次の標準を。
+          </h1>
+          <p class="mt-6 text-slate-700 text-lg">大胆な設計。迅速な実装。継続的な価値提供。</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="services.html" class="px-6 py-3 rounded-xl text-white bg-sky-600 hover:bg-sky-700 shadow">サービスを見る</a>
+            <a href="works.html" class="px-6 py-3 rounded-xl bg-white/70 hover:bg-white shadow">実績を見る</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 grid-auto-fit">
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">設計から運用まで一気通貫</h3>
+          <p class="text-sm text-slate-600 mt-2">要件定義・アーキ・開発・運用。フェーズ横断で成果を出します。</p>
+          <a class="mt-4 inline-block text-sky-700 hover:underline" href="about.html">詳しく</a>
+        </article>
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">高速プロトタイピング</h3>
+          <p class="text-sm text-slate-600 mt-2">MVPで仮説検証。失敗コストを最小化します。</p>
+          <a class="mt-4 inline-block text-sky-700 hover:underline" href="services.html">詳しく</a>
+        </article>
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">データ駆動の意思決定</h3>
+          <p class="text-sm text-slate-600 mt-2">メトリクスに基づく改善サイクルで継続成長。</p>
+          <a class="mt-4 inline-block text-sky-700 hover:underline" href="works.html">詳しく</a>
+        </article>
+        <article class="glass rounded-2xl p-6">
+          <h3 class="text-lg font-semibold">開発者体験の最適化</h3>
+          <p class="text-sm text-slate-600 mt-2">DXを高める道具立てと文化づくり。</p>
+          <a class="mt-4 inline-block text-sky-700 hover:underline" href="careers.html">詳しく</a>
+        </article>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div class="glass rounded-3xl p-8 sm:p-10">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-6">最新トピックス</h2>
+          <div class="masonry">
+            <article class="card glass rounded-2xl p-5 mb-4">
+              <h3 class="font-semibold">リリース 2025.10</h3>
+              <p class="text-sm text-slate-600 mt-1">新フレーム導入でビルド時間を40%短縮しました。</p>
+            </article>
+            <article class="card glass rounded-2xl p-5 mb-4">
+              <h3 class="font-semibold">導入事例</h3>
+              <p class="text-sm text-slate-600 mt-1">コーポレートサイト刷新でCVR+28%達成。</p>
+            </article>
+            <article class="card glass rounded-2xl p-5 mb-4">
+              <h3 class="font-semibold">社内制度</h3>
+              <p class="text-sm text-slate-600 mt-1">学習補助ポイントを拡充。自己投資を後押し。</p>
+            </article>
+            <article class="card glass rounded-2xl p-5 mb-4">
+              <h3 class="font-semibold">採用情報</h3>
+              <p class="text-sm text-slate-600 mt-1">バックエンド・フロントエンド・SREを積極採用中。</p>
+            </article>
+            <article class="card glass rounded-2xl p-5 mb-4">
+              <h3 class="font-semibold">イベント</h3>
+              <p class="text-sm text-slate-600 mt-1">次回テックトークは11/12開催予定。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p class="text-sm text-slate-600">&copy; <span id="year"></span> サンプル株式会社</p>
+              <p class="text-xs text-slate-500">未来のスタンダードを創造する</p>
+            </div>
+            <div class="flex items-center gap-4 text-slate-600">
+              <a href="#" aria-label="X" class="hover:text-sky-600">X</a>
+              <a href="#" aria-label="GitHub" class="hover:text-sky-600">GitHub</a>
+              <a href="#" aria-label="LinkedIn" class="hover:text-sky-600">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear().toString();
+      const btn = document.getElementById('menuBtn'); const menu = document.getElementById('mobileMenu');
+      if (btn && menu) btn.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+    </script>
+  </body>
+</html>
