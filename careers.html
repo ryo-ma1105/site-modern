@@ -7,40 +7,21 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .bg-aurora {
-        position: fixed; inset: 0; z-index: -1;
+      .bg-aurora { position: fixed; inset: 0; z-index: -1;
         background: radial-gradient(60% 60% at 10% 10%, rgba(56,189,248,.25), transparent 60%),
                     radial-gradient(50% 50% at 90% 20%, rgba(167,139,250,.25), transparent 60%),
                     radial-gradient(40% 40% at 30% 90%, rgba(34,197,94,.2), transparent 60%),
                     linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #22c55e 100%);
-        filter: saturate(120%) blur(20px) brightness(1.05);
-        animation: hue 18s linear infinite;
-      }
-      @keyframes hue { 
-        0% { filter: hue-rotate(0deg) saturate(120%) blur(20px) brightness(1.05); }
-        100% { filter: hue-rotate(360deg) saturate(120%) blur(20px) brightness(1.05); }
-      }
-      .glass {
-        backdrop-filter: blur(12px) saturate(110%);
-        background: rgba(255,255,255,0.6);
-        border: 1px solid rgba(255,255,255,0.4);
-      }
-      .neon-underline {
-        position: relative;
-      }
-      .neon-underline::after {
-        content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px;
-        background: linear-gradient(90deg, #38bdf8, #a78bfa);
-        transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
-      }
+        filter: saturate(120%) blur(20px) brightness(1.05); animation: hue 18s linear infinite; }
+      @keyframes hue { 0% { filter: hue-rotate(0deg) saturate(120%) blur(20px) brightness(1.05);} 100% { filter: hue-rotate(360deg) saturate(120%) blur(20px) brightness(1.05);} }
+      .glass { backdrop-filter: blur(12px) saturate(110%); background: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.4); }
+      .neon-underline { position: relative; }
+      .neon-underline::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px;
+        background: linear-gradient(90deg, #38bdf8, #a78bfa); transform: scaleX(0); transform-origin: left; transition: transform .3s ease; }
       .neon-underline:hover::after { transform: scaleX(1); }
-      .grid-auto-fit { 
-        display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;
-      }
-      .masonry { column-count: 3; column-gap: 1rem; }
-      @media (max-width: 1024px) { .masonry { column-count: 2; } }
-      @media (max-width: 640px) { .masonry { column-count: 1; } }
-      .card { break-inside: avoid; }
+      .grid-auto-fit { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+      .prose p { margin-top: .5rem; color: #475569; }
+      .hero-img { background-image: url('https://picsum.photos/seed/hero/1600/900'); background-size: cover; background-position: center; }
     </style>
   </head>
   <body class="min-h-screen text-slate-800 antialiased selection:bg-sky-200 selection:text-slate-900">
@@ -79,27 +60,7 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
       <section class="glass rounded-3xl p-8 sm:p-12">
         <h1 class="text-3xl sm:text-4xl font-bold">採用情報</h1>
-        <p class="mt-4 text-slate-700">最高のチームは、最高の習慣から生まれます。</p>
-        <div class="mt-8 grid-auto-fit">
-          <div class="glass rounded-2xl p-6">
-            <h3 class="font-semibold">募集職種</h3>
-            <p class="text-sm text-slate-600 mt-2">バックエンド / フロントエンド / SRE / コンサルタント</p>
-            <ul class="mt-3 text-sm list-disc list-inside text-slate-600"><li>正社員</li><li>フルリモート可</li></ul>
-          </div>
-          <div class="glass rounded-2xl p-6">
-            <h3 class="font-semibold">働き方</h3>
-            <p class="text-sm text-slate-600 mt-2">アウトプット基準。フレックス勤務。</p>
-            <ul class="mt-3 text-sm list-disc list-inside text-slate-600"><li>学習支援</li><li>副業可</li></ul>
-          </div>
-          <div class="glass rounded-2xl p-6">
-            <h3 class="font-semibold">求める人物像</h3>
-            <p class="text-sm text-slate-600 mt-2">自走・傾聴・改善。チームで強くなる人。</p>
-            <ul class="mt-3 text-sm list-disc list-inside text-slate-600"><li>仮説検証力</li><li>ドキュメント力</li></ul>
-          </div>
-        </div>
-        <div class="mt-10">
-          <a href="contact.html" class="inline-block px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white shadow">応募・お問い合わせ</a>
-        </div>
+        <p class="mt-4 text-slate-700">バックエンド / フロントエンド / SRE を中心に募集しています。</p>
       </section>
     </main>
 
