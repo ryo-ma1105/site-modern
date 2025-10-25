@@ -57,19 +57,82 @@
       </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+    
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 space-y-10">
+      <!-- Hero -->
       <section class="glass rounded-3xl p-8 sm:p-12">
         <h1 class="text-3xl sm:text-4xl font-bold">ITコンサルティング</h1>
-        <p class="mt-4 text-slate-700">戦略から運用まで一気通貫で支援します。KPI設計、技術選定、PoC、MVP、SREまで対応します。</p>
-        <h2 class="text-xl font-semibold mt-6">提供内容</h2>
-        <ul class="mt-2 list-disc list-inside text-slate-700">
-          <li>DX戦略・要件定義</li>
-          <li>アーキテクチャ設計・レビュー</li>
-          <li>CI/CD・監視・セキュリティ</li>
-        </ul>
+        <p class="mt-4 text-slate-700">戦略から実装・運用までを一気通貫で支援します。成果から逆算し、必要十分なスコープで素早く価値を出します。</p>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="glass rounded-2xl p-4">
+            <h3 class="font-semibold">戦略</h3>
+            <p class="text-sm text-slate-600 mt-1">KGI/KPI設計、ロードマップ、体制設計。</p>
+          </div>
+          <div class="glass rounded-2xl p-4">
+            <h3 class="font-semibold">実装</h3>
+            <p class="text-sm text-slate-600 mt-1">技術選定、PoC、MVP、品質保証。</p>
+          </div>
+          <div class="glass rounded-2xl p-4">
+            <h3 class="font-semibold">運用</h3>
+            <p class="text-sm text-slate-600 mt-1">SRE、監視、セキュリティ、改善サイクル。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages -->
+      <section class="glass rounded-3xl p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">サービスパッケージ</h2>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="glass rounded-2xl p-6">
+            <h3 class="font-semibold">アセスメント</h3>
+            <p class="text-sm text-slate-600 mt-2">2週間で現状診断と改善提案。</p>
+            <ul class="mt-2 text-sm list-disc list-inside text-slate-600">
+              <li>現状ヒアリング</li><li>アーキレビュー</li><li>改善計画書</li>
+            </ul>
+            <p class="mt-4 text-slate-700"><span class="text-xl font-bold">¥300,000〜</span></p>
+          </div>
+          <div class="glass rounded-2xl p-6 ring-2 ring-sky-400">
+            <h3 class="font-semibold">伴走支援</h3>
+            <p class="text-sm text-slate-600 mt-2">週次で意思決定と実装を前進。</p>
+            <ul class="mt-2 text-sm list-disc list-inside text-slate-600">
+              <li>週次定例/課題管理</li><li>仕様・技術相談</li><li>ベロシティ改善</li>
+            </ul>
+            <p class="mt-4 text-slate-700"><span class="text-xl font-bold">¥500,000/月〜</span></p>
+          </div>
+          <div class="glass rounded-2xl p-6">
+            <h3 class="font-semibold">フル実装</h3>
+            <p class="text-sm text-slate-600 mt-2">MVP〜本番運用まで請負または準委任。</p>
+            <ul class="mt-2 text-sm list-disc list-inside text-slate-600">
+              <li>MVP構築</li><li>CI/CD・監視</li><li>セキュリティ設計</li>
+            </ul>
+            <p class="mt-4 text-slate-700"><span class="text-xl font-bold">個別見積</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="glass rounded-3xl p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">進め方</h2>
+        <ol class="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4 text-sm text-slate-700">
+          <li class="glass rounded-2xl p-4"><span class="font-semibold">1. 現状理解</span><br/>課題・KPIの明確化</li>
+          <li class="glass rounded-2xl p-4"><span class="font-semibold">2. 施策設計</span><br/>方針・ロードマップ合意</li>
+          <li class="glass rounded-2xl p-4"><span class="font-semibold">3. 実装</span><br/>PoC→MVP→本番</li>
+          <li class="glass rounded-2xl p-4"><span class="font-semibold">4. 運用</span><br/>SLO/SLI・改善サイクル</li>
+        </ol>
+      </section>
+
+      <!-- FAQ -->
+      <section class="glass rounded-3xl p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">よくある質問</h2>
+        <div class="mt-4 space-y-3 text-sm text-slate-700">
+          <details class="glass rounded-xl p-4"><summary class="font-semibold">最短の開始時期は？</summary><p class="mt-2">契約後、最短翌週から開始可能です。</p></details>
+          <details class="glass rounded-xl p-4"><summary class="font-semibold">契約形態は？</summary><p class="mt-2">準委任または請負に対応します。</p></details>
+          <details class="glass rounded-xl p-4"><summary class="font-semibold">リモート対応は？</summary><p class="mt-2">原則リモート、必要に応じてオンサイト対応します。</p></details>
+        </div>
         <p class="mt-6"><a class="text-sky-700 hover:underline" href="services.html">事業一覧に戻る</a></p>
       </section>
     </main>
+
 
     <footer class="mt-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
